@@ -1,0 +1,18 @@
+@media screen and (min-width: 900px) {
+    #work-section {
+        // padding: 2em 3em;
+
+        .projects {
+            flex-direction: row;
+
+            .project-text {
+                width: 50%;
+                padding: 0 2em 0 0;
+            }
+
+            .project-image {
+
+            }
+        }
+    }
+}
