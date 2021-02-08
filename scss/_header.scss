@@ -1,0 +1,104 @@
+header {
+    position: relative;
+
+    #hamburger-menu {
+        display: inline-flex;
+        flex-direction: column;
+        height: auto;
+        width: 30px;
+        background: transparent;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        cursor: pointer;
+        z-index: 2;
+    
+        .hamburger-bar {
+            width: 30px;
+            height: 4px;
+            background: $red;
+    
+            &:not(:first-child) {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 90%;
+        z-index: 2;
+
+        &.show {
+            display: block;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: $dark-grey;
+            padding: 2em 0;
+
+            li {
+                position: relative;
+
+                &:not(:first-child) {
+                    padding: 2em 0 0 0;
+                }
+
+                &:hover {
+                    a {
+                        color: $red;
+
+                        &:before, &:after {
+                            content: '';
+                            position: absolute;
+                            width: 30px;
+                            height: 1px;
+                            background: $red;
+                            bottom: .5em;
+                        }
+
+                        &:before {
+                            left: -3em;
+                        }
+
+                        &:after {
+                            right: -3em;
+                        }
+                    }
+                }
+
+                a {
+                    color: $off-white;
+                    letter-spacing: .1em;
+                }
+            }
+        }
+    }
+
+    /* -------------------------------------- SCREEN BLUR ------------------------------------- */ 
+    #screen-blur {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $black-screen-blur;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+
+        &.blur-screen {
+            display: block;
+        }
+    }
+}
+

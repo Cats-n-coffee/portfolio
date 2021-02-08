@@ -1,0 +1,18 @@
+#resume-button {
+    position: fixed;
+    left: 1em;
+    bottom: 1em;
+    width: 40px;
+    height: 40px;
+    background: $red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        i {
+            color: $off-white;
+        }
+    }
+}
