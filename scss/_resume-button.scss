@@ -10,9 +10,25 @@
     align-items: center;
     justify-content: center;
     z-index: 20;
+    cursor: pointer;
+    transition: all 600ms ease-in-out;
 
     span {
         i {
+            color: $off-white;
+        }
+    }
+
+    &:hover, &:focus {
+        flex-direction: column-reverse;
+        transform: scale(2.1) translate(.5em, -0.5em);
+        background: $resume-button-blur;
+
+        &:after {
+            content: 'Resume';
+            width: auto;
+            height: auto;
+            font-size: .4em;
             color: $off-white;
         }
     }

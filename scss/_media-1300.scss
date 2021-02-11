@@ -21,50 +21,89 @@
             display: block;
             top: 0;
             width: 100%;
+            max-width: 100%;
+            background: $full-screen-navbar;
 
             ul {
                 flex-direction: row;
-                background: $full-screen-navbar;
+                background: transparent;
                 padding: .5em 0;
-                justify-content: center;
+                justify-content: space-between;
+                width: 50%;
+                margin: 0 auto;
 
                 li {
                     &:not(:first-child) {
-                        padding: 0 0 0 5em;
+                        padding: 0;
                     }
 
                     &:hover, &:focus {
+                        
                         a {
-                            transform: scale(1.2);
-                            // color: blue;
+                            // transform: translateY(150%);
     
-                            &:before, &:after {
+                            &:before {
                                 content: '';
                                 position: absolute;
+                                width: 20px;
+                                height: 20px;
+                                background: $red;
+                                bottom: -150%;
+                                left: 35%;
+                                transform: rotate(90deg);
+                            }
+
+                            &:after {
                                 width: 0;
                                 height: 0;
                                 background: none;
-                                bottom: 0;
-                            }
-    
-                            &:before {
-                                left: 0;
-                            }
-    
-                            &:after {
-                                right: 0;
                             }
                         }
                     }
 
                     a {
                         color: $red;
+
+                        &:before, &:after {
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 20px;
+                            left: 35%;
+                            right: 0;
+                            background: none;
+                            bottom: -150%;
+                            transition: all 600ms ease-in-out;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 0px;
+                            height: 0px;
+                            background: none;
+                            bottom: 0;
+                        }
+    
                     }
                 }
             }
         }
     }
 
+    #work-section {
+        .projects {
 
+            &:before {
+                width: 200px;
+            }
+
+            .project-text {
+                h3 {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
     
 }
