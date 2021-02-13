@@ -1,3 +1,5 @@
+// In order: toggle mobile menu, contact form validation, home page animation
+
 // --------------- Toggle mobile menu
 const mobileMenu = document.getElementById('hamburger-menu');
 const navMenu = document.getElementById('nav-menu');
@@ -10,13 +12,19 @@ mobileMenu.addEventListener('click', toggleMobileMenu);
 
 // Toggle the whole menu after clicking on an section
 navbarItems.forEach(item => {
-    item.addEventListener('click', toggleMobileMenu)
+    item.addEventListener('click', closeMobileMenu)
 });
 
 function toggleMobileMenu() {
     navMenu.classList.toggle('show');
     html.classList.toggle('stop-scroll');
     screenBlur.classList.toggle('blur-screen');
+}
+
+function closeMobileMenu() {
+    navMenu.classList.remove('show');
+    html.classList.remove('stop-scroll');
+    screenBlur.classList.remove('blur-screen');
 }
 
 // --------------- Contact form validation
@@ -99,3 +107,41 @@ function clearMessages() {
         messageDiv.removeChild(messageDiv.firstChild);
     }
 }
+
+// ----------------- Home page animation
+// Randomize all the numbers for CSS position and animation duration for small and medium dots
+
+const container = document.getElementById('container');
+
+const homePage = document.getElementById('home');
+let screenWidth = homePage.clientWidth;
+let screenHeight = homePage.clientHeight;
+
+var dotCount = 0;
+
+if (screenWidth < 600) {
+    dotCount = Math.floor(Math.random() * 50); // Number of dots on the screen
+}
+else {
+    dotCount = Math.floor(Math.random() * 100); // Number of dots on the screen
+}
+
+let smallClass = 'dot';
+let mediumClass = 'dot-med';
+
+function createDots(classDot) {
+    var count = 0;
+  
+    while (count < dotCount) {
+      let dotX = Math.floor(Math.random() * screenWidth); // Left position value
+      let dotY = Math.floor(Math.random() * screenHeight); // Top position value
+      let dotDuration = Math.floor(Math.random() * 10); // Animation duration
+  
+      const oneDot = `<span class="${classDot}" style="top: ${dotY}px; left: ${dotX}px; animation-duration: ${dotDuration}s;"></span>`;
+      homePage.innerHTML += oneDot;
+      count++;
+    }
+}
+
+createDots(smallClass);
+createDots(mediumClass);
