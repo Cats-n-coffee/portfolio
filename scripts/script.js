@@ -16,12 +16,14 @@ navbarItems.forEach(item => {
 });
 
 function toggleMobileMenu() {
+    if (!mobileMenu) { return }
     navMenu.classList.toggle('show');
     html.classList.toggle('stop-scroll');
     screenBlur.classList.toggle('blur-screen');
 }
 
 function closeMobileMenu() {
+    if (!mobileMenu) { return }
     navMenu.classList.remove('show');
     html.classList.remove('stop-scroll');
     screenBlur.classList.remove('blur-screen');
@@ -110,8 +112,6 @@ function clearMessages() {
 
 // ----------------- Home page animation
 // Randomize all the numbers for CSS position and animation duration for small and medium dots
-
-const container = document.getElementById('container');
 
 const homePage = document.getElementById('home');
 let screenWidth = homePage.clientWidth;

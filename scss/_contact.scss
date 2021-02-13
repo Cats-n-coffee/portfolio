@@ -6,27 +6,46 @@
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+                justify-content: center;
 
         form {
             width: auto;
             padding: 0 0 2em 0;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
             display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+                    align-items: center;
             
     
             span {
                 padding: 1em 0;
                 display: inline-block;
-                align-self: flex-start;
+                -ms-flex-item-align: start;
+                    align-self: flex-start;
             }
     
             p {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                        flex-direction: column;
                 max-width: 500px;
                 width: 100%;
 
@@ -77,6 +96,7 @@
             }
 
             button {
+                -ms-flex-item-align: start;
                 align-self: flex-start;
                 margin: 1.5em 0 0 0;
                 max-width: 270px;

@@ -2,8 +2,13 @@ header {
     position: relative;
 
     #hamburger-menu {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+                flex-direction: column;
         height: auto;
         width: 30px;
         background: transparent;
@@ -13,11 +18,11 @@ header {
         cursor: pointer;
         z-index: 3;
         
-    
         .hamburger-bar {
             width: 30px;
             height: 4px;
             background: $red;
+            -webkit-transition: background 600ms ease-in-out;
             transition: background 600ms ease-in-out;
     
             &:not(:first-child) {
@@ -50,9 +55,16 @@ header {
         }
 
         ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+                    align-items: center;
             background: $off-white;
             padding: 4em 0;
 
@@ -77,6 +89,7 @@ header {
                 a {
                     color: $light-black;
                     letter-spacing: .1em;
+                    -webkit-transition: all 600ms ease-in-out;
                     transition: all 600ms ease-in-out;
 
                     &:before, &:after {
@@ -86,6 +99,7 @@ header {
                         height: 1px;
                         background: none;
                         bottom: .5em;
+                        -webkit-transition: all 600ms ease-in-out;
                         transition: all 600ms ease-in-out;
                     }
 

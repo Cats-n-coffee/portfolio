@@ -4,7 +4,7 @@
 
         h2 {
             &:after {
-                right: -1.2em;
+                right: -1.5em;
             }
         }
     }
@@ -20,8 +20,13 @@
     
         .footer-wrapper {
             width: 100%;
-            flex-direction: row;
-            justify-content: space-evenly;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
             padding: 2em 3em;
 
             nav {

@@ -6,11 +6,18 @@
     height: 40px;
     background: $red;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
     z-index: 20;
     cursor: pointer;
+    -webkit-transition: all 600ms ease-in-out;
     transition: all 600ms ease-in-out;
 
     span {
@@ -20,8 +27,12 @@
     }
 
     &:hover, &:focus {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
-        transform: scale(2.1) translate(.5em, -0.5em);
+        -webkit-transform: scale(2.1) translate(.5em, -0.5em);
+                transform: scale(2.1) translate(.5em, -0.5em);
         background: $resume-button-blur;
 
         &:after {

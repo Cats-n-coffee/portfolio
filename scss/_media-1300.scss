@@ -11,10 +11,6 @@
         }
     }
 
-    .full-screen {
-        // height: 100vh;
-    }
-
     header {
 
         #hamburger-menu {
@@ -29,10 +25,15 @@
             background: $full-screen-navbar;
 
             ul {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
                 flex-direction: row;
                 background: transparent;
                 padding: .5em 0;
-                justify-content: space-between;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                        justify-content: space-between;
                 width: 50%;
                 margin: 0 auto;
 
@@ -53,7 +54,8 @@
                                 background: $red;
                                 bottom: -150%;
                                 left: 35%;
-                                transform: rotate(90deg);
+                                -webkit-transform: rotate(90deg);
+                                        transform: rotate(90deg);
                             }
 
                             &:after {
@@ -76,6 +78,7 @@
                             right: 0;
                             background: none;
                             bottom: -150%;
+                            -webkit-transition: all 600ms ease-in-out;
                             transition: all 600ms ease-in-out;
                         }
 
@@ -116,10 +119,6 @@
             padding: 2em 0 0 0;
         }
     }
-
-    // #contact-section {
-        
-    // }
     
     footer {
         .footer-wrapper {
@@ -129,8 +128,12 @@
                 width: 30%;
 
                 ul {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
-                    justify-content: space-between;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                            justify-content: space-between;
                     width: 100%;
 
                     li {

@@ -1,14 +1,28 @@
 #work-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
 
     .projects {
         padding: 2em 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+                align-items: center;
         position: relative;
         max-width: 1440px;
         margin: 0 auto;
@@ -35,6 +49,7 @@
                 a {
                     color: $red;
                     font-weight: 600;
+                    -webkit-transition: color 600ms ease-in-out;
                     transition: color 600ms ease-in-out;
 
                     &:hover, &:focus {
@@ -44,9 +59,16 @@
             }
 
             .project-access {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
-                align-items: flex-start;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                        align-items: flex-start;
                 padding: 3em 0;
                 position: relative;
 
@@ -64,8 +86,10 @@
         }
 
         .project-image {
+            display: -ms-grid;
             display: grid;
-            grid-template-columns: minmax(0, 600px);
+            -ms-grid-columns: minmax(0, 600px);
+                grid-template-columns: minmax(0, 600px);
 
             img {
                 max-width: 100%;

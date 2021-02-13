@@ -1,9 +1,16 @@
 #about-section {
     height: auto;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
 
     p {
         max-width: 1440px;
@@ -16,6 +23,7 @@
             a {
                 color: $red;
                 font-weight: 600;
+                -webkit-transition: color 600ms ease-in-out;
                 transition: color 600ms ease-in-out;
 
                 &:hover {

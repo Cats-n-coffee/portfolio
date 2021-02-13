@@ -2,10 +2,19 @@ footer {
     background: $light-black;
 
     .footer-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+                align-items: center;
         width:100%;
         max-width: 1440px;
         margin: 0 auto;
@@ -22,6 +31,7 @@ footer {
 
                     a {
                         color: $off-white;
+                        -webkit-transition: color 600ms ease-in-out;
                         transition: color 600ms ease-in-out;
                     }
 
@@ -37,8 +47,12 @@ footer {
         .social-media {
             margin: 2em 0;
             width: 25%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                    justify-content: space-between;
 
             a {
                 svg {
@@ -47,6 +61,7 @@ footer {
     
                     path {
                         fill: $off-white;
+                        -webkit-transition: fill 600ms ease-in-out;
                         transition: fill 600ms ease-in-out;
                     }
     
