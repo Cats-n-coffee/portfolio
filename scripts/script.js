@@ -115,7 +115,7 @@ function clearMessages() {
 
 const homePage = document.getElementById('home');
 let screenWidth = homePage.clientWidth;
-let screenHeight = homePage.clientHeight;
+let screenHeight = homePage.offsetHeight;
 
 var dotCount = 0;
 

@@ -62,6 +62,9 @@
                     font-family: $font-primary;
                     font-size: 1em;
                     padding: .4em;
+                    -webkit-appearance: none; 
+                    -webkit-border-radius:0;
+                    border-radius: 0;
 
                     &:hover, &:focus {
                         background: $light-grey;
