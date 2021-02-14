@@ -1,14 +1,3 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const homePage = document.getElementById('home');
-    let screenWidth = homePage.clientWidth;
-
-    var computedHeight = document.defaultView.getComputedStyle( homePage, null ).getPropertyValue( 'height' );
-
-    //let screenHeight = homePage.offsetHeight;
-
-    homePageAnimation(homePage, computedHeight, screenWidth)
-})
-
 // --------------- Toggle mobile menu
 const mobileMenu = document.getElementById('hamburger-menu');
 const navMenu = document.getElementById('nav-menu');
@@ -41,6 +30,17 @@ function closeMobileMenu() {
 // ----------------- Home page animation
 // Randomize all the numbers for CSS position and animation duration for small and medium dots
 
+window.addEventListener('load', () => {
+    const homePage = document.getElementById('home');
+    let screenWidth = homePage.clientWidth;
+
+    var computedHeight = document.defaultView.getComputedStyle( homePage, null ).getPropertyValue( 'height' );
+
+    //let screenHeight = homePage.offsetHeight;
+
+    homePageAnimation(homePage, computedHeight, screenWidth)
+})
+
 function homePageAnimation(homePage, computedHeight, screenWidth) {
     var screenHeight = computedHeight.substr(0, computedHeight.length -2);
     screenHeight = parseInt(screenHeight);
@@ -48,10 +48,10 @@ function homePageAnimation(homePage, computedHeight, screenWidth) {
     var dotCount = 0;
     console.log(screenHeight);
 if (screenWidth < 600) {
-    dotCount = Math.floor(Math.random() * 50); // Number of dots on the screen mobile and small tablets
+    dotCount = Math.floor(Math.random() * (50 - 10) + 10); // Number of dots on the screen mobile and small tablets
 }
 else {
-    dotCount = Math.floor(Math.random() * 100); // Number of dots on the screen for tablets and desktops
+    dotCount = Math.floor(Math.random() * (100 - 10) + 10); // Number of dots on the screen for tablets and desktops
 }
 
 let smallClass = 'dot';

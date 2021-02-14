@@ -127,7 +127,7 @@
             <section id="contact-section" class="full-screen big-section">
                 <h2>Contact</h2>
                 <div class="form-wrapper">
-                    <form method="POST" name="contact-form" id="contact-form" netlify>
+                    <form method="POST" name="contact-form" id="contact-form" data-netlify-recaptcha="true" netlify>
                         <span>Do you have a question for me? Let's get in touch!</span>
                         <p>
                             <label for="name">Your Name</label>
@@ -142,6 +142,7 @@
                             <textarea id="message" name="message" rows="4" required></textarea>
                         </p>
                         <div id="message-form"></div>
+                        <div data-netlify-recaptcha="true"></div>
                         <button type="submit" class="deployed-projects">Submit</button>
                     </form>
                 </div>
