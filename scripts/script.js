@@ -82,6 +82,16 @@ function checkFields(e) {
     else {
         displaySentMessage();
     }
+    const bodyMessage = name + '+' + email + '+' + message;
+    const options = {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: bodyMessage,
+    }
+
+    fetch('/', options)
+    .then(response => console.log('sent', response))
+    .catch(error => console.log('error', error))
 }
 
 // Loops through the errors array and displays all of them
