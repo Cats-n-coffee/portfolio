@@ -79,9 +79,9 @@ function checkFields(e) {
         displayErrorMessage(errorMessage);
     }
     // Otherwise display the 'sent' message
-    else {
-        displaySentMessage();
-    }
+    // else {
+    //     displaySentMessage();
+    // }
     const bodyMessage = name + '+' + email + '+' + message;
     const options = {
         method: "POST",
@@ -90,7 +90,7 @@ function checkFields(e) {
     }
 
     fetch('/', options)
-    .then(response => console.log('sent', response))
+    .then(response => displaySentMessage())
     .catch(error => console.log('error', error))
 }
 
