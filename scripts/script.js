@@ -36,8 +36,6 @@ window.addEventListener('load', () => {
 
     var computedHeight = document.defaultView.getComputedStyle( homePage, null ).getPropertyValue( 'height' );
 
-    //let screenHeight = homePage.offsetHeight;
-
     homePageAnimation(homePage, computedHeight, screenWidth)
 })
 
