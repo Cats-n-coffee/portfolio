@@ -74,6 +74,7 @@
 
                 textarea {
                     border: 2px solid $light-black;
+                    margin: 0 0 1em 0;
                 }
             }
 
@@ -96,6 +97,12 @@
                     border: 2px solid $green-sent-message;
                     background: $green-sent-blur;
                 }
+            }
+
+            .spam-verify {
+                margin: 0 0 1em 0;
+                text-align: left;
+                align-self: flex-start;
             }
 
             button {
