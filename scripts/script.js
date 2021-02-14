@@ -1,9 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
     const homePage = document.getElementById('home');
     let screenWidth = homePage.clientWidth;
-    let screenHeight = homePage.offsetHeight;
 
-    homePageAnimation(homePage, screenHeight, screenWidth)
+    var computedHeight = document.defaultView.getComputedStyle( homePage, null ).getPropertyValue( 'height' );
+
+    //let screenHeight = homePage.offsetHeight;
+
+    homePageAnimation(homePage, computedHeight, screenWidth)
 })
 // In order: toggle mobile menu, contact form validation, home page animation
 
@@ -120,12 +123,10 @@ function clearMessages() {
 // ----------------- Home page animation
 // Randomize all the numbers for CSS position and animation duration for small and medium dots
 
-// const homePage = document.getElementById('home');
-// let screenWidth = homePage.clientWidth;
-// let screenHeight = homePage.offsetHeight;
+function homePageAnimation(homePage, computedHeight, screenWidth) {
+    var screenHeight = computedHeight.substr(0, computedHeight.length -2);
+    screenHeight = parseInt(screenHeight);
 
-
-function homePageAnimation(homePage, screenHeight, screenWidth) {
     var dotCount = 0;
     console.log(screenHeight);
 if (screenWidth < 600) {
