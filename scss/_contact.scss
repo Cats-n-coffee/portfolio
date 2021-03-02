@@ -15,7 +15,7 @@
 
         form {
             width: auto;
-            padding: 0 0 2em 0;
+            padding: 2em 1em;
             display: -webkit-inline-box;
             display: -ms-inline-flexbox;
             display: inline-flex;
@@ -29,11 +29,14 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
                     align-items: center;
+            max-width: 500px;
+            background: $full-screen-navbar;
             
     
             span {
-                padding: 1em 0;
+                padding: 0 0 1em 0;
                 display: inline-block;
+                font-weight: 600;
                 -ms-flex-item-align: start;
                     align-self: flex-start;
             }
@@ -51,11 +54,12 @@
 
                 label {
                     padding: 1.5em 0 .5em 0;
-                    color: $red;
+                    color: $dark-red;
+                    font-weight: 600;
                 }
 
                 input, textarea {
-                    background: $off-white;
+                    background: white;
                     border: none;
                     border-bottom: 2px solid $light-black;
                     color: $light-black;
@@ -67,13 +71,13 @@
                     border-radius: 0;
 
                     &:hover, &:focus {
-                        background: $light-grey;
+                        background: $light-red;
                         outline: 1px solid $light-black;
                     }
                 }
 
                 textarea {
-                    border: 2px solid $light-black;
+                    // border: 2px solid $light-black;
                     margin: 0 0 1em 0;
                 }
             }

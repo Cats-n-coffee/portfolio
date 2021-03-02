@@ -1,0 +1,15 @@
+@media screen and (min-width: 600px) {
+    #home {
+        h1 {
+            text-align: center;
+        }
+    }
+
+    #contact-section {
+        .form-wrapper {
+            form {
+                padding: 2em;
+            }
+        }
+    }
+}

@@ -36,7 +36,8 @@ window.addEventListener('load', () => {
 
     var computedHeight = document.defaultView.getComputedStyle( homePage, null ).getPropertyValue( 'height' );
 
-    homePageAnimation(homePage, computedHeight, screenWidth)
+    homePageAnimation(homePage, computedHeight, screenWidth);
+    createObserver();
 })
 
 function homePageAnimation(homePage, computedHeight, screenWidth) {
@@ -71,4 +72,22 @@ function createDots(classDot) {
 
 createDots(smallClass);
 createDots(mediumClass);
+}
+
+function createObserver() {
+    const mockups = document.querySelectorAll('.project-image');
+
+    observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+                entry.target.classList.add('animate')
+            } else {
+                entry.target.classList.remove('animate')
+            }
+        })
+    })
+
+    mockups.forEach(mockup => {
+        observer.observe(mockup)
+    })
 }

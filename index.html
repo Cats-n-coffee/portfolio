@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <script defer src="scripts/script-minified.js"></script>
+    <script defer src="scripts/script.js"></script>
     <title>Lucie Alonso</title>
 </head>
 <body>
@@ -22,8 +22,8 @@
                 <!-- SCREEN BLUR -->
                 <div id="screen-blur"></div>
                 <ul>
+                    <li><a href="#home" class="navbar-item">About</a></li>
                     <li><a href="#work-section" class="navbar-item">Projects</a></li>
-                    <li><a href="#about-section" class="navbar-item">About</a></li>
                     <li><a href="#contact-section" class="navbar-item">Contact</a></li>
                 </ul>
             </nav>
@@ -32,12 +32,15 @@
             <!-- HOME -->
             <section id="home" class="full-screen">
                 <h1>Hi, I'm Lucie. I'm a Frontend developer.</h1>
+                <section id="about-section">
+                    <p>I'm a junior frontend developer living in South Florida and originally from France. I love spending time figuring out how 
+                        things work, and pushing my limits.<br><span>Checkout my <a href="resume/webdev-resume.pdf" target="_blank">resume</a>.</span></p>
+                </section>
             </section>
             <!-- WORK -->
             <section id="work-section" class="big-section">
                 <h2>My Projects</h2>
-                <article class="full-screen projects first-project">
-                    
+                <article class="full-screen projects first-project">  
                     <div class="project-text">
                         <h3>Responsive Dashboard</h3>
                         <p>A dashboard created with plain HTML, Javascript and SCSS. 
@@ -145,12 +148,7 @@
                 </article>
             </section>
             <!-- ABOUT -->
-            <section id="about-section" class="full-screen big-section">
-                <h2>About</h2>
-                <p>I'm a junior frontend developer living in South Florida and originally from France. I love spending time figuring out how 
-                    things work, and pushing my limits. I am passionate about web design and programming, and still learning Javascript, HTML, 
-                    CSS and UI animations, NodeJs and React.<br><span>Checkout my <a href="resume/webdev-resume.pdf" target="_blank">resume</a>.</span></p>
-            </section>
+            
             <!-- CONTACT -->
             <section id="contact-section" class="full-screen big-section">
                 <h2>Contact</h2>
@@ -185,8 +183,8 @@
             <div class="footer-wrapper">
                 <nav>
                     <ul>
+                        <li><a href="#home">About</a></li>
                         <li><a href="#work-section">Projects</a></li>
-                        <li><a href="#about-section">About</a></li>
                         <li><a href="#contact-section">Contact</a></li>
                     </ul>
                 </nav>

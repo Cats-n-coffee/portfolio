@@ -16,12 +16,14 @@ $salmon: #FFA987;
 $off-white: #F7EBE8;
 $dark-grey: #444140;
 $light-black: #1E1E24;
-$light-grey: #e2d9d6;
+$light-grey: #f8f2ef;
+$light-red: #ffd6d6;
+$dark-red: #e20101;
 $green-sent-message: #34ebb4;
 
 // Blur backgrounds
 $black-screen-blur: rgba(0, 0, 0, 0.4);
-$full-screen-navbar: rgba(30, 30, 36, 0.2);
+$full-screen-navbar: rgba(30, 30, 36, 0.15);
 $resume-button-blur: rgba(229, 75, 75, .8);
 $error-form-blur: rgba(229, 75, 75, .4);
 $green-sent-blur: rgba(52, 235, 180, .4);
@@ -155,7 +157,7 @@ main {
 // Partials
 @import 'header';
 @import 'footer';
-@import 'about';
+// @import 'about';
 @import 'home';
 @import 'work';
 @import 'contact';
@@ -163,6 +165,7 @@ main {
 @import 'home-animation';
 
 // Media queries
+@import 'media-600';
 @import 'media-750'; 
 @import 'media-900';
 @import 'media-1300';
