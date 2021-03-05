@@ -75,7 +75,8 @@ createDots(mediumClass);
 }
 
 function createObserver() {
-    const mockups = document.querySelectorAll('.project-image');
+    const fromLeft = document.querySelectorAll('.slide-left');
+    const fromRight = document.querySelectorAll('.slide-right');
 
     observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -87,7 +88,11 @@ function createObserver() {
         })
     })
 
-    mockups.forEach(mockup => {
+    fromLeft.forEach(mockup => {
+        observer.observe(mockup)
+    });
+
+    fromRight.forEach(mockup => {
         observer.observe(mockup)
     })
 }

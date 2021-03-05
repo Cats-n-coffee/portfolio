@@ -38,6 +38,8 @@
         }
 
         .project-text {
+            z-index: 2;
+           
             h3 {
                 padding: 0 0 1.5em 0;
                 font-family: $font-secondary;
@@ -95,24 +97,33 @@
             img {
                 max-width: 100%;
             }
+        }
 
+        .slide-left {
             &.animate {
-                -webkit-animation: 2s ease-out forwards slideImage;
-                        animation: 2s ease-out forwards slideImage;
+                -webkit-animation: 2s ease-out forwards slideFromLeft;
+                        animation: 2s ease-out forwards slideFromLeft;
+            }
+        }
+
+        .slide-right {
+            &.animate {
+                -webkit-animation: 2s ease-out forwards slideFromRight;
+                        animation: 2s ease-out forwards slideFromRight;
             }
         }
     }
 }
 
 
-@-webkit-keyframes slideImage {
+@-webkit-keyframes slideFromRight {
     0% {
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
         -webkit-transform: translateX(100%);
                 transform: translateX(100%);
     }
-    50% {
+    70% {
         opacity: 1;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     }
@@ -123,14 +134,51 @@
                 transform: translateX(0);
     }
 }
-@keyframes slideImage {
+@keyframes slideFromRight {
     0% {
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
         -webkit-transform: translateX(100%);
                 transform: translateX(100%);
     }
-    50% {
+    70% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+    100% { 
+        opacity: 1; 
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    70% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+    100% { 
+        opacity: 1; 
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    70% {
         opacity: 1;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     }
